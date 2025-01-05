@@ -29,6 +29,9 @@
                     <Label Text="Search..."
                     VerticalOptions="Center"/>
                 </HorizontalStackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="TapSearch" Tapped="TapSearch_Tapped" />
+                </Frame.GestureRecognizers>
             </Frame>
             <VerticalStackLayout Grid.Row="2" Spacing="20">
                 <Label Text="Categories"

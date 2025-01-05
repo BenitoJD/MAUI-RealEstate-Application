@@ -17,5 +17,7 @@ namespace RealEstates.Models
         public string ImageUrl { get; set; }
         [JsonProperty("properties")]
         public object Properties { get; set; }
+
+        public string FullImageUrl => AppSettings.ApiUrl + ImageUrl;
     }
 }

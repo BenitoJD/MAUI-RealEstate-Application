@@ -7,8 +7,17 @@ namespace RealEstates
         public App()
         {
             InitializeComponent();
+            var accessToken =   Preferences.Get("accessToken", string.Empty);
 
-            MainPage = new RegisterPage();
+            if(string.IsNullOrEmpty(accessToken))
+            {
+                MainPage = new NavigationPage(new RegisterPage());
+            }
+            else
+            {
+                MainPage = new NavigationPage(new CustomTabbedPage());
+            }
+
         }
     }
 }

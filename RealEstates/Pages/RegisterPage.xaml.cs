@@ -15,10 +15,15 @@ public partial class RegisterPage : ContentPage
 		if (response)
 		{
 			await DisplayAlert("Success", "You have successfully registered", "OK");
+			await Navigation.PushAsync(new LoginPage());
 		}
 		else
 		{
 			await DisplayAlert("Oops", "Something went wrong", "Cancel");
 		}
+	}
+	async void TapLogin_Tapped(System.Object sender, System.EventArgs e)
+	{
+		await Navigation.PushAsync(new LoginPage());
 	}
 }

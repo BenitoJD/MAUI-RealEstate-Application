@@ -8,7 +8,11 @@
              SelectedTabColor="AntiqueWhite"
              UnselectedTabColor="Aqua"
              Title="CustomTabbedPage">
-    <local:Home Title="Home" IconImageSource="home_icon.png"/>
+    <NavigationPage Title="Home" IconImageSource="home_icon.png" BarBackground="#1d94ab" BarTextColor="White">
+        <x:Arguments>
+            <local:Home />
+        </x:Arguments>
+    </NavigationPage>
     <local:BookmarksPage Title="Saved" IconImageSource="bookmark_icon.png"/>
     <local:SettingsPage Title="Settings" IconImageSource="settings_icon.svg"/>
 </TabbedPage>

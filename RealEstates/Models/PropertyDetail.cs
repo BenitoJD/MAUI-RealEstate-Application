@@ -1,5 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
+using RealEstates;
 namespace RealEstateApp.Models
 {
     public class PropertyDetail
@@ -21,6 +22,8 @@ namespace RealEstateApp.Models
 
         [JsonProperty("imageUrl")]
         public string ImageUrl { get; set; }
+
+        public string FullImageUrl => AppSettings.ApiUrl + "/" + ImageUrl;
 
         [JsonProperty("phone")]
         public string Phone { get; set; }

@@ -38,5 +38,7 @@ namespace RealEstates.Models
 
         [JsonProperty("bookmarks")]
         public object Bookmarks { get; set; }
+        public string FullImageUrl => AppSettings.ApiUrl + "/" + ImageUrl;
+
     }
 }

@@ -18,6 +18,6 @@ namespace RealEstates.Models
         [JsonProperty("properties")]
         public object Properties { get; set; }
 
-        public string FullImageUrl => AppSettings.ApiUrl + ImageUrl;
+        public string FullImageUrl => AppSettings.ApiUrl + "/" + ImageUrl;
     }
 }
